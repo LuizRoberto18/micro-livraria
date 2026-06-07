@@ -1,6 +1,7 @@
 const express = require('express');
 const shipping = require('./shipping');
 const inventory = require('./inventory');
+const reviews = require('./reviews');
 const cors = require('cors');
 
 const app = express();
@@ -42,6 +43,21 @@ app.get('/shipping/:cep', (req, res, next) => {
     );
 });
 
+app.get('/reviews/:product_id', (req, res, next) => {
+    reviews.GetReviews(
+        {
+            product_id: req.params.product_id,
+        },
+        (err, data)=>{
+            if (err){
+                console.error(err);
+                res.status(500).send({error: 'something failed :('});
+            } else {
+                res.json(data.reviews);
+            }
+        }
+    );
+});
 /**
  * Inicia o router
  */
