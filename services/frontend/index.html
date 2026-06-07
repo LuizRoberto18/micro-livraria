@@ -25,6 +25,29 @@
             <div class="columns books"></div>
         </section>
 
+        <!-- Modal de Avaliações -->
+        <div class="modal" id="reviews-modal">
+            <div class="modal-background" id="reviews-modal-bg"></div>
+            <div class="modal-card reviews-modal-card">
+                <header class="modal-card-head reviews-modal-head">
+                    <div class="reviews-modal-header-content">
+                        <span class="reviews-modal-icon">⭐</span>
+                        <div>
+                            <p class="modal-card-title reviews-modal-title" id="reviews-modal-title">Avaliações</p>
+                            <p class="reviews-modal-subtitle" id="reviews-modal-subtitle"></p>
+                        </div>
+                    </div>
+                    <button class="delete is-medium" aria-label="fechar" id="reviews-modal-close"></button>
+                </header>
+                <section class="modal-card-body reviews-modal-body" id="reviews-modal-body">
+                    <!-- conteúdo injetado via JS -->
+                </section>
+                <footer class="modal-card-foot reviews-modal-foot">
+                    <button class="button reviews-close-btn" id="reviews-modal-close-btn">Fechar</button>
+                </footer>
+            </div>
+        </div>
+
         <footer class="footer has-text-centered">Feito com ❤️ na UFMG</footer>
 
         <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
